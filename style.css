@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mainColor: rgb(29, 38, 53);
+    --secondaryColor: rgb(55, 41, 32);
+    --thirdColor: rgb(54, 75, 58);
+
+    --textColor: rgb(204, 225, 244);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto auto auto auto;
+
+    width: 960px;    
+    margin: auto;
+}
+
+.header {
+    background-image: url('img/header-img.jpg');
+    height: 300px;
+}
+
+.navbar {
+    background-image: linear-gradient(var(--secondaryColor), var(--mainColor));
+}
+
+.nav-btn {
+    list-style: none;  
+    display: flex;
+    justify-content: space-around;
+}
+.nav-btn li {
+    padding: 10px 20px;
+}
+.nav-btn a {
+    color: var(--textColor);
+    text-decoration: none;
+}
