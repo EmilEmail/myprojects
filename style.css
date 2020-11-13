@@ -2,14 +2,23 @@
     font-family: ReeyFont;
   src: url(fonts/Reey-Regular.otf);
 }
+@font-face {
+    font-family: AlluraFont;
+  src: url(fonts/Allura-Regular.otf);
+}
+@font-face {
+    font-family: HVDFont;
+  src: url(fonts/Kingthings_Trypewriter_2.ttf);
+}
 
 :root {
-    --mainColor: rgb(29, 38, 53);
-    --secondaryColor: rgb(55, 41, 32);
-    --thirdColor: rgb(54, 75, 58);
-    --fourthColor: rgb(204, 225, 244);
-    --fifthColor: rgb(171, 166, 162);
-    --gradientColor: linear-gradient(to right, rgb(171, 166, 162), rgb(29, 38, 53));
+    --color1: rgb(29, 38, 53);
+    --color2: rgb(55, 41, 32);
+    --color3: rgb(54, 75, 58);
+    --color4: rgb(204, 225, 244);
+    --color5: rgb(171, 166, 162);
+    --color6: rgb(78, 109, 84);
+    --color7: linear-gradient(to right, rgb(171, 166, 162), rgb(29, 38, 53));
 }
 
 * {
@@ -22,8 +31,7 @@ a {
     text-decoration: none;
 }
 body {
-    /* background-image: linear-gradient(var(--fifthColor), var(--fourthColor)); */
-    background-color: var(--fifthColor);
+    background-image: linear-gradient(var(--color5), var(--color4));
 }
 
 
@@ -41,9 +49,12 @@ body {
 /**************HEADER*******************/
 
 .header {
-    background-image: url('img/header-img.jpg');
+    background-image: url('img/header-img2.png');
+    background-size: cover;
     height: 300px;
     display: grid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 h1 {
     font-family: ReeyFont;
@@ -54,7 +65,6 @@ h1 {
     text-shadow: black 3px 10px 10px;
     font-weight: 100;
     color: rgb(78, 109, 84);
-    background-color: var(--fifthColor)
 
     
 }
@@ -62,47 +72,64 @@ h1 {
 /*****************NAVBAR*********************/
 
 .navbar {
-    background-image: linear-gradient(var(--secondaryColor), var(--mainColor));
+    /* background-color: var(--color2); */
+    background-image: radial-gradient(var(--color3), var(--color2));
 }
 
 .nav-btn {
     list-style: none;  
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    font-family: Allurafont;
+    font-size: 2vw;
 }
 .nav-btn li {
     padding: 10px 20px;
 }
 .nav-btn li a {
-    padding: 10px 70px;
+    padding: 10px 20px;
 }
 .nav-btn a {
     color: var(--textColor);
+    text-shadow: grey 0 0 10px;
+
 }
 .nav-btn a:hover {
-    background-color: darkblue;
+    background-image: none;
+    animation-name: button-animation;
+    animation-duration: 4s;
+    text-shadow: white 0 0 10px;
 }
+@keyframes button-animation {
+    from {background-color: var(--color1)};
+    to {background-color: var(--color2)};
+  }
 
 
 /*****************MAIN*********************/
 
 .main {
-    background-image: radial-gradient(var(--fourthColor) 40%, var(--fifthColor));
+    background-image: url('img/main-img2.jpeg');
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
     align-items: space-around;
     max-width: 960px;
+    font-family: HVDFont;
+    font-weight: 100;
 }
 
 /***** BUTTONS *****/
 .project-btn {
     margin: 30px;
-    border: 5px double var(--thirdColor);
+    border: 0px double var(--color3);
     background-image: url('img/wooden-button.jpg');
     background-size: cover;
     opacity: .8;
+    border-radius: 10px;
+    box-shadow: black 3px 3px 3px;
 }
 .project-btn:hover {
     opacity: 1;
@@ -126,7 +153,9 @@ h1 {
 /******************FOOTER*******************/
 
 .footer {
-    background-image: linear-gradient(var(--secondaryColor), var(--mainColor));
+    background-image: linear-gradient(var(--color3), var(--color1));
     text-align: center;
     padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
