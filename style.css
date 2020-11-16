@@ -32,6 +32,7 @@ a {
 }
 body {
     background-image: linear-gradient(var(--color5), var(--color4));
+    height: 100vh;
 }
 
 
@@ -72,8 +73,8 @@ h1 {
 /*****************NAVBAR*********************/
 
 .navbar {
-    /* background-color: var(--color2); */
-    background-image: radial-gradient(var(--color3), var(--color2));
+    background-color: var(--color5);
+    /* background-image: radial-gradient(var(--color3), var(--color2)); */
 }
 
 .nav-btn {
@@ -153,7 +154,8 @@ h1 {
 /******************FOOTER*******************/
 
 .footer {
-    background-image: linear-gradient(var(--color3), var(--color1));
+    background-color: var(--color5);
+    /* background-image: linear-gradient(var(--color3), var(--color1)); */
     text-align: center;
     padding: 20px;
     border-bottom-left-radius: 10px;
